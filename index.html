@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/static/swiper-4.2.2.min.css" />
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+	</head>
+	<body>
+		<div class="nav">
+			<div class="top-tip">
+				<span class="tip">欢迎您，知行</span>
+				<span class="slide-up">↑</span>
+				<span class="logout">退出</span>
+				<span class="login">登录</span>
+			</div>
+			<div class="slide-down">↓</div>
+			<div class="mainBtn">
+				<div class="function">陌生人广场</div>
+				<div class="function">
+					<div class="site">人生站点</div>
+				</div>
+				<div class="function">我的足迹</div>
+			</div>
+		</div>
+		<div class="swiper-container">
+  			<div class="swiper-wrapper">
+    			<div class="swiper-slide"></div>
+    			<div class="swiper-slide"></div>
+    			<div class="swiper-slide"></div>
+    			<div class="swiper-slide"></div>
+    			<div class="swiper-slide"></div>
+  			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/swiper-4.2.2.min.js"></script>
+	<script type="text/javascript">
+		$(".slide-up").click(()=>{
+			$(".top-tip").slideToggle();
+			$(".slide-down").slideToggle();
+		});
+		$(".slide-down").click(()=>{
+			$(".top-tip").slideToggle();
+			$(".slide-down").slideToggle();
+		});
+		$(".logout").click(()=>{
+			alert("您已成功登出");
+			$(".top-tip").slideToggle();
+			$(".slide-down").slideToggle();
+		});
+		var mySwiper = new Swiper('.swiper-container', {
+			autoplay: true,
+			effect : 'cube',
+			cubeEffect: {
+			   slideShadows: true,
+			   shadow: true,
+			   shadowOffset: 100,
+			   shadowScale: 0.6
+			},
+		})
+	</script>
+</html>
